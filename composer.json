@@ -1,0 +1,34 @@
+{
+    "name": "postboxcms/laravelinstaller",
+    "description": "An installation wizard for Laravel apps",
+    "license": "MIT",
+    "version": "1.0",
+    "authors": [
+        {
+            "name": "Sanket Raut",
+            "email": "sanket@digitalbit.in"
+        }
+    ],
+    "require": {
+        "php": "^7.3 || ^8.0",
+        "facade/ignition-contracts": "^1.0",
+        "filp/whoops": "^2.7.2",
+        "symfony/console": "^5.0"
+    },
+    "require-dev": {
+        "laravel/framework": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Digitalbit\\LaravelInstaller\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Digitalbit\\LaravelInstaller\\LaravelInstallerProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}
