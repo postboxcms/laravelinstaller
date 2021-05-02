@@ -1,7 +1,7 @@
 <?php
 // Index route
 Route::get('/', function() {
-    if(config('laravelinstaller.status') !== true) {
+    if(config('laravelinstaller.installed') !== "1") {
         return redirect('/install');
     }
 });
