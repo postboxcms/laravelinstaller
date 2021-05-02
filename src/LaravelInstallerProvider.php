@@ -42,7 +42,7 @@ class LaravelInstallerProvider extends ServiceProvider
 
         // publish assets
         $this->publishes([
-            __DIR__ . '/assets' => public_path('vendor/digitalbit/laravelinstaller'),
+            __DIR__ . '/assets' => public_path('vendor/postboxcms/laravelinstaller'),
         ], 'laravelinstaller');
 
         // publish configuration

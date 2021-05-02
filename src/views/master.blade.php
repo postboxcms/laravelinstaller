@@ -18,8 +18,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
   <!-- Custom styles for this template-->
-  <link href="{{asset('vendor/digitalbit/laravelinstaller/css/base.css')}}" rel="stylesheet">
-  <link href="{{asset('vendor/digitalbit/laravelinstaller/css/package.css')}}" rel="stylesheet">
+  <link href="{{asset('vendor/postboxcms/laravelinstaller/css/base.css')}}" rel="stylesheet">
+  <link href="{{asset('vendor/postboxcms/laravelinstaller/css/package.css')}}" rel="stylesheet">
 
 
 </head>
