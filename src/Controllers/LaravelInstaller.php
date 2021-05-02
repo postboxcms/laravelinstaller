@@ -1,14 +1,14 @@
 <?php
 
-namespace Digitalbit\LaravelInstaller\Controllers;
+namespace Postbox\LaravelInstaller\Controllers;
 
 use Illuminate\Encryption\Encrypter;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Http\Request;
 
-use Digitalbit\LaravelInstaller\Requests\StoreAppData;
-use Digitalbit\LaravelInstaller\Requests\StoreDBData;
+use Postbox\LaravelInstaller\Requests\StoreAppData;
+use Postbox\LaravelInstaller\Requests\StoreDBData;
 
 use App\Http\Controllers\Controller;
 

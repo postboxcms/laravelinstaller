@@ -1,6 +1,6 @@
 <?php
 
-namespace Digitalbit\LaravelInstaller\Requests;
+namespace Postbox\LaravelInstaller\Requests;
 
 // use App\Http\Traits\ValidationErrors;
 use Illuminate\Foundation\Http\FormRequest;

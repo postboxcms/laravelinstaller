@@ -1,6 +1,6 @@
 <?php
 
-namespace Digitalbit\LaravelInstaller\Middleware;
+namespace Postbox\LaravelInstaller\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;

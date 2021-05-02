@@ -1,12 +1,12 @@
 <?php
 
-namespace Digitalbit\LaravelInstaller\Requests;
+namespace Postbox\LaravelInstaller\Requests;
 
 use Illuminate\Validation\Factory as ValidationFactory;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-use Digitalbit\LaravelInstaller\Traits\ValidationErrors;
+use Postbox\LaravelInstaller\Traits\ValidationErrors;
 
 class StoreDBData extends FormRequest
 {

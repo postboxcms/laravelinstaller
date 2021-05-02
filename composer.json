@@ -20,13 +20,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Digitalbit\\LaravelInstaller\\": "src/"
+            "Postbox\\LaravelInstaller\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Digitalbit\\LaravelInstaller\\LaravelInstallerProvider"
+                "Postbox\\LaravelInstaller\\LaravelInstallerProvider"
             ]
         }
     },

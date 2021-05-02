@@ -1,6 +1,6 @@
 <?php
 
-namespace Digitalbit\LaravelInstaller;
+namespace Postbox\LaravelInstaller;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
@@ -20,7 +20,7 @@ class LaravelInstallerProvider extends ServiceProvider
     public function register()
     {
         // register the controller
-        $this->app->make('Digitalbit\LaravelInstaller\Controllers\LaravelInstaller');
+        $this->app->make('Postbox\LaravelInstaller\Controllers\LaravelInstaller');
         $this->loadViewsFrom(__DIR__ . '/views', 'laravelinstaller');
     }
 

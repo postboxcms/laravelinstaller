@@ -1,6 +1,6 @@
 <?php
 
-namespace Digitalbit\LaravelInstaller\Traits;
+namespace Postbox\LaravelInstaller\Traits;
 
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Exceptions\HttpResponseException;
