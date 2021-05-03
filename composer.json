@@ -2,7 +2,6 @@
     "name": "postboxcms/laravelinstaller",
     "description": "An installation wizard for Laravel apps",
     "license": "MIT",
-    "version": "v1.0.1",
     "authors": [
         {
             "name": "Sanket Raut",
