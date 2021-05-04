@@ -6,11 +6,12 @@ use Illuminate\Validation\Factory as ValidationFactory;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-use Postbox\LaravelInstaller\Traits\ValidationErrors;
+// use Postbox\LaravelInstaller\Traits\ValidationErrors;
 
 class StoreDBData extends FormRequest
 {
-    use ValidationErrors;
+    // Enable this trait only when request is sent over ajax and a json response is expected
+    // use ValidationErrors;
 
     public function __construct(ValidationFactory $validationFactory) {
         $validationFactory->extend(

@@ -225,11 +225,11 @@ class LaravelInstaller extends Controller
             config(['database.connections.'. $request->connection .'.database' => $request->database]);
             config(['database.connections.'. $request->connection .'.username' => $request->user]);
             config(['database.connections.'. $request->connection .'.password' => $request->password]);
-
             DB::connection($request->connection)->getPdo();
             $request->session()->put('process.db',$request->all());
             return redirect('/install/verify-details');
         } catch(\Exception $e) {
+            $request->session()->flash('message', 'Cannot establish database connection');
             return redirect('/install/database');
         }
     }
@@ -257,6 +257,7 @@ class LaravelInstaller extends Controller
             $this->_updateEnv('DB_CONNECTION',$this->sessiondb['connection']);
             $this->_updateEnv('DB_HOST',$this->sessiondb['host']);
             $this->_updateEnv('DB_PORT',$this->sessiondb['port']);
+            $this->_updateEnv('DB_DATABASE',$this->sessiondb['database']);
             $this->_updateEnv('DB_USERNAME',$this->sessiondb['user']);
             $this->_updateEnv('DB_PASSWORD',$this->sessiondb['password']);
 

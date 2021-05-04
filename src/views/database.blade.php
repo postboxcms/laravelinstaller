@@ -4,6 +4,13 @@
     @csrf
         <!-- Nested Row within Card Body -->
         <div class="row">
+            <div class="col-lg-12">
+                @if(session()->has('message'))
+                    <div class="bd-callout alert alert-warning">{{Session::get('message')}}</div>
+                @endif
+            </div>
+        </div>
+        <div class="row">
             {{-- <div class="col-lg-6 d-none d-lg-block bg-login-image bg-install-image">
             <img src="{{asset('images/cms-background.jpg')}}"/>
             </div> --}}
@@ -22,10 +29,10 @@
             <div class="col-md-12">
             <div class="form-group">
             <input required value="{{$db['host']}}" type="text" name="host" class="form-control form-control-user @error('host') is-invalid @enderror" id="host" aria-describedby="host" placeholder="Database host ({{env('DB_HOST')}})">
-                @error('description')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
+                @error('host')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
                 @enderror
             </div>
             </div>

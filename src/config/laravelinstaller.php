@@ -1,5 +1,5 @@
 <?php
 
 return [
-  'status' => env('APP_INSTALLED')
+  'installed' => env('APP_INSTALLED')
 ];
