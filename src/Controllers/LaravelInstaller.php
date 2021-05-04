@@ -13,6 +13,7 @@ use Postbox\LaravelInstaller\Requests\StoreDBData;
 use App\Http\Controllers\Controller;
 
 use Artisan;
+use Config;
 
 class LaravelInstaller extends Controller
 {
@@ -219,14 +220,15 @@ class LaravelInstaller extends Controller
         $this->sessionFlags = $request->session()->get('process.flags');
         array_push($this->sessionFlags,'db');
         $request->session()->put('process.flags',$this->sessionFlags);
+        $request->session()->put('process.db',$request->all());
 
         try {
-            config(['database.connections.'. $request->connection .'.host' => $request->host]);
-            config(['database.connections.'. $request->connection .'.database' => $request->database]);
-            config(['database.connections.'. $request->connection .'.username' => $request->user]);
-            config(['database.connections.'. $request->connection .'.password' => $request->password]);
+            Config::set('database.connections.'. $request->connection .'.host', $request->host);
+            Config::set('database.connections.'. $request->connection .'.database', $request->database);
+            Config::set('database.connections.'. $request->connection .'.username', $request->user);
+            Config::set('database.connections.'. $request->connection .'.password', $request->password);
+            DB::purge($request->connection);
             DB::connection($request->connection)->getPdo();
-            $request->session()->put('process.db',$request->all());
             return redirect('/install/verify-details');
         } catch(\Exception $e) {
             $request->session()->flash('message', 'Cannot establish database connection');
