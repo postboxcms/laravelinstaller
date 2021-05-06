@@ -1,2 +1,2 @@
 # Laravel Installer
-Laravel installer is an independent plugin to create installation panel for your app
+Laravel installer is an independent plugin to create installation wizard for your app
