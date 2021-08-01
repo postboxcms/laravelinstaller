@@ -35,3 +35,7 @@ To avoid the string length error while migrations being re-run edit ````app/Prov
     Schema::defaultStringLength(191); 
     ````
 Now run your application using ````php artisan serve```` or through the url and enjoy.
+
+### Credits
+Laravel installer was created by [Sanket Raut](https://twitter.com/sanketmraut) as an aid to help generate an installation wizard for laravel apps
+
